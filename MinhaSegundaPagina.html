@@ -5,7 +5,7 @@
     <title>Instituto de Computação</title>
   </head>
   <body>
-      <h2>Formulário de contato</h2>
+      <h2>Formulário de Contato</h2>
       <p>Por favor, preencha o formulário abaixo e clique no botão Enviar Mensagem. Agradecemos por seu contato.</p>
       <fieldset>
         <legend>Dados Básicos</legend>
@@ -37,17 +37,17 @@
       <fieldset>
         <legend> Assinale as linguagens já usadas por você</legend>
 
-        <input type="radio" nome="Linguagem" value="java"> Java
+        <input type="checkbox" name="Linguagem" value="java"> Java
 
-        <input type="radio" nome="Linguagem"  value="C">C
+        <input type="checkbox" name="Linguagem"  value="C">C
 
-        <input type="radio" nome="Linguagem" value="CMaisMais">C++
+        <input type="checkbox" name="Linguagem" value="CMaisMais">C++
 
-        <input type="radio" nome="Linguagem" value="Perl">Perl
+        <input type="checkbox" name="Linguagem" value="Perl">Perl
 
-        <input type="radio" nome="Linguagem" value="Python">Python
+        <input type="checkbox" name="Linguagem" value="Python">Python
 
-        <input type="radio" nome="Linguagem" value="JavaScript" >JavaScript<br>
+        <input type="checkbox" name="Linguagem" value="JavaScript" >JavaScript<br>
 
       </fieldset>
 
@@ -59,8 +59,8 @@
             <input type="color" name="favcolor" value="#ff0000">
           </form>
 
-          <label for="nascimento">Data de Nascimento</label>
-          <input type="date" name="nascimento" id="nascimento"><br>
+          <label for="nascimento">Data de Nascimento </label>
+          <input type="date" name="nascimento" id="nascimento"required placeholder="mm/dd/yyyy"/><br>
 
           <label for="ano"> Ano de Entrada no IComp</label>
           <input type="text" name="ano" id="ano">
@@ -97,9 +97,10 @@
 
       <fieldset>
         <legend>Digite sua mensagem</legend>
-        <textarea name="mensagem" rows="4" cols="50">Este é o valor padrão</textarea>
+        <textarea name="mensagem" rows="4" cols="50">Este é o valor padrão!</textarea>
       </fieldset>
-        
+        <input type="resetar" name="resetar" value="Resetar Dados">
+        <input type="EnviarMen" name="EnviarMen" value="Enviar Mensagem">
       </form>
   </body>
 </html>
