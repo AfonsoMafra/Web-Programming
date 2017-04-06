@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+div#corpo{
+  width: 600px;
+  margin: 0px 0px 0px 350px;
+  border: 1px solid black;
+  padding: 5px;
+}
