@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Instituto de Computação</title>
+  </head>
+  <body>
+    <form class="" name="circulo" action="index.html" method="post">
+      Informe o raio: <input type="text" name="raio" value="0">
+      <input type="button" name="botao" value="Ok"></br>
+      Área do círculo: <input type="text" name="area" value="0"><br>
+      Circunferência: <input type="text" name="circunf" value="0">
+
+    </form>
+    <script type="text/javascript">
+    document.circulo.botao.onclick = function(){/*Objeto referenciando o botão*/
+    raio = document.circulo.raio.value;
+    document.circulo.area.value = (Math.PI * raio * raio).toFixed(2);/* toFixed limita a quantidade de casas decimais*/
+    document.circulo.circunf.value = (Math.PI * 2 * raio).toFixed(2);
+
+    }
+    </script>
+  </body>
+</html>
