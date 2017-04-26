@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Variáveis</title>
+  </head>
+
+
+  <script type="text/javascript">
+
+  function teste(){
+    console.log(a);
+    console.log(foo());
+
+    var a = 1;
+
+    function foo(){
+      return 2;
+    }
+  }
+
+  teste();
+          // Saída: Undefined
+          //         2
+          // O "a" ainda não existe quando chamado no primeiro console.log apesar de ser uma variável global.
+          // O 2 é retornado pois é o retorno da função interna a função teste.
+  </script>
+
+  <body>
+    <p>
+<h1>Exercício</h1>
+  Qual é o resultado da execução do seguinte código?
+  Por que ele teve a saída informada?</br></br>
+
+      function teste(){</br></br>
+
+        console.log(a);</br>
+        console.log(foo());</br></br>
+
+      var a = 1;</br></br>
+
+      function foo(){</br>
+      return 2;</br>
+      }</br>
+    }</br></br>
+
+    Verificar o console: mouse->botão direito->inspecionar->console.
+    <p>
+
+
+
+  </body>
+</html>
