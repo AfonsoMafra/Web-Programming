@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Instituto de Computação</title>
+  </head>
+
+  <body>
+    <form class="" name="esfera" action="index.html" method="post">
+
+    Raio da Esfera<input type="text" name="raio" value="0">
+
+    <input type="button" name="botao" value="Calcular"></br><br>
+
+    Área da esfera<input type="text" name="area" value="0"><br><br>
+
+    Volume da esfera<input type="text" name="volume" value="0">
+
+    </form>
+
+    <script type="text/javascript">
+    document.esfera.botao.onclick = function(){
+
+    raio = document.esfera.raio.value;
+
+    document.esfera.area.value = (4 * Math.PI * raio * raio).toFixed(2);/* toFixed limita a quantidade de casas decimais*/
+
+    document.esfera.volume.value = ((4 * Math.PI * raio * raio * raio)/3).toFixed(2);
+    }
+    </script>
+
+  </body>
+</html>
