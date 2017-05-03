@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Um gráfico de barras usando imagens</title>
+  </head>
+
+
+  <body>
+    <h1>Um gráfico de barras usando imagens</h1> <br><br>
+    <form  class="" name="grafico" action="index.html" method="post">
+      Informe a altura das barras:
+
+      <input type="text" name="alt1" value="0">
+
+      <input type="text" name="alt2" value="0">
+
+      <input type="text" name="alt3" value="0">
+
+      <input type="text" name="alt4" value="0">
+
+      <input type="text" name="alt5" value="0"> <br><br>
+
+      Informe a largura das barras(em pixels):
+
+      <input type="text" name="larg" value="0"><br><br>
+
+      <input type="button" name="botao" value="Desenhe o gráfico"></br>
+
+
+
+      <img id="img" src="http://coyote.icomp.ufam.edu.br/red.gif" alt="" >
+
+      <img id="img1" src="http://coyote.icomp.ufam.edu.br/red.gif" alt="" >
+
+      <img id="img2" src="http://coyote.icomp.ufam.edu.br/red.gif" alt="" >
+
+      <img id="img3" src="http://coyote.icomp.ufam.edu.br/red.gif" alt="" >
+
+      <img id="img4" src="http://coyote.icomp.ufam.edu.br/red.gif" alt="" >
+    </form>
+
+    <script type="text/javascript">
+    document.grafico.botao.onclick = function(){/*Objeto referenciando o botão*/
+
+    document.grafico.img.height = document.grafico.alt1.value;
+    document.grafico.img.width = document.grafico.larg.value;
+
+    document.grafico.img1.height = document.grafico.alt2.value;
+    document.grafico.img1.width = document.grafico.larg.value;
+
+    document.grafico.img2.height = document.grafico.alt3.value;
+     document.grafico.img2.width = document.grafico.larg.value;
+
+    document.grafico.img3.height = document.grafico.alt4.value;
+    document.grafico.img3.width = document.grafico.larg.value;
+
+    document.grafico.img4.height = document.grafico.alt5.value;
+    document.grafico.img4.width = document.grafico.larg.value;
+
+    }
+    </script>
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
