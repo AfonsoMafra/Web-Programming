@@ -4,3 +4,5 @@ Resposta:
     1) Linha 4: O comentário neste código é feito com este comando:"<comment>...</comment>", contudo em html o comando que se utiliza é este: <!-- ... -->
     Correção:   <!-- Isto é um comentário, não deve aparecer na página -->
 
+Nota: 0.5
+Apenas um erro foi reportado corretamente.
