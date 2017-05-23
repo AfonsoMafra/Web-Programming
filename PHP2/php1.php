@@ -1,0 +1,17 @@
+<?php
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$website = $_POST['website'];
+$mensagem = $_POST['mensagem'];
+
+$usario = "root";
+$senha = "icomp123";
+
+#Conexão com MySQL via PDO_MYSQL
+
+try{
+  $conn =new PDO("mysql:host=localhost;dataobject");
+}
+
+
+?>
