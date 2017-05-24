@@ -11,7 +11,9 @@ $senha = "icomp123";
 
 try{
   $conn =new PDO("mysql:host=localhost;dbname=Contatos", $usuario, $senha);
-  print
+  print"Conexao efetuada com sucesso!";
+}catch(PDOException $e){
+	echo $e->getMessage();
 }
 
 
