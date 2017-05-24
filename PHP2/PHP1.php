@@ -18,7 +18,7 @@
       <fieldset>
         <legend>Dados Básicos</legend>
         Nome <input  type="text" name="nome" value=""><br><br>
-        E-mail <input id="email" type="text" name="email" value="" required placeholder="seumone@dominio.com.br"><br><br>
+        E-mail <input id="email" type="email" name="email" value="" required placeholder="seumone@dominio.com.br"><br><br>
         Website <input type="text" name="website" value="http://">
       </fieldset>
 

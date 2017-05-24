@@ -10,7 +10,8 @@ $senha = "icomp123";
 #Conexão com MySQL via PDO_MYSQL
 
 try{
-  $conn =new PDO("mysql:host=localhost;dataobject");
+  $conn =new PDO("mysql:host=localhost;dbname=Contatos", $usuario, $senha);
+  print
 }
 
 
