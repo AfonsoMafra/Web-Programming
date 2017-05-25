@@ -1,30 +1,14 @@
 <?php
 
-
-
-
-
 #Conexão com MySQL via PDO_MYSQL
 
 try{
-  #Cria o banco de dados
-		#$stmt = $conn->prepare('CREATE DATABASE contatos;');
-		#$stmt = $conn->execute;
-
-		#Seleciona o banco de dados
-		#$stmt = $conn->prepare('use contatos;');
-		#$stmt = $conn->execute();
-
-		#Cria a tabela
-		#$stmt = $conn->prepare('create table contato (id int primary key auto_increment not null, nome varchar(30), email varchar(50), website varchar(100), mensagem varchar(150);)');
-		#$stmt->execute();
-
 	$usuario = "root";
 	$senha = "icomp123";
 
   $conn = new PDO("mysql:host=localhost;dbname=contatos", $usuario, $senha);
 	$conn->exec("set names utf8");
-  print"Conexao efetuada com sucesso!";
+  #print"Conexao efetuada com sucesso!";
 
 
 	$nome = $_POST['nome'];
@@ -45,15 +29,15 @@ try{
   $stmt->execute();
 
   while($row = $stmt->fetch()){
-  	printf($row['id'] );
-  	printf($row['nome'] );
-  	printf($row['email']  );
-  	printf($row['website'] );
-		printf($row['mensagem']);
-  }
 
-	}catch(PDOException $e){
-		echo $e->getMessage();
+  	printf($row['nome'] . "<br />");
+  	printf($row['email']  . "<br />");
+  	printf($row['website']. "<br />" );
+		printf($row['mensagem']. "<br>"."<br />");
+
+  }
+	
+	}	catch(PDOException $e){
+			echo $e->getMessage();
 	}
-}
 ?>
