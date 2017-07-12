@@ -1,0 +1,1989 @@
+2017-06-29 17:38:04 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:38:04 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498757884.5683
+    'REQUEST_TIME' => 1498757884
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 17:38:28 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:38:28 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498757908.3684
+    'REQUEST_TIME' => 1498757908
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 17:39:14 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:39:14 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498757954.2907
+    'REQUEST_TIME' => 1498757954
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 17:39:39 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:39:39 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498757979.2074
+    'REQUEST_TIME' => 1498757979
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 17:39:57 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:39:57 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498757997.7551
+    'REQUEST_TIME' => 1498757997
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 17:40:49 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:40:49 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498758049.1876
+    'REQUEST_TIME' => 1498758049
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 17:46:36 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 17:46:36 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498758396.6373
+    'REQUEST_TIME' => 1498758396
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:02:19 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 18:02:19 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498759339.2279
+    'REQUEST_TIME' => 1498759339
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:25:04 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 18:25:04 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498760704.8855
+    'REQUEST_TIME' => 1498760704
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:25:37 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 18:25:37 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498760737.1831
+    'REQUEST_TIME' => 1498760737
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:28:41 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Migration.php(288): yii\db\Command->execute()
+#2 /var/www/html/YII/advanced/console/migrations/m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m130524_201442_init->up()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Migration.php(288): yii\db\Command->execute()
+#2 /var/www/html/YII/advanced/console/migrations/m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m130524_201442_init->up()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2017-06-29 18:28:38 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498760918.9621
+    'REQUEST_TIME' => 1498760918
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:37:48 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'pw_database' in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', 'icomp123', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'pw_database' in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 18:37:47 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498761467.9905
+    'REQUEST_TIME' => 1498761467
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:39:53 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'pw_Database' in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', 'icomp123', NULL)
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'pw_Database' in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#16 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-06-29 18:39:53 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498761593.4343
+    'REQUEST_TIME' => 1498761593
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 18:42:33 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Migration.php(288): yii\db\Command->execute()
+#2 /var/www/html/YII/advanced/console/migrations/m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m130524_201442_init->up()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Migration.php(288): yii\db\Command->execute()
+#2 /var/www/html/YII/advanced/console/migrations/m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m130524_201442_init->up()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2017-06-29 18:42:28 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498761748.7341
+    'REQUEST_TIME' => 1498761748
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2017-06-29 19:28:24 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Migration.php(288): yii\db\Command->execute()
+#2 /var/www/html/YII/advanced/console/migrations/m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m130524_201442_init->up()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 /var/www/html/YII/advanced/vendor/yiisoft/yii2/db/Migration.php(288): yii\db\Command->execute()
+#2 /var/www/html/YII/advanced/console/migrations/m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m130524_201442_init->up()
+#4 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/YII/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/YII/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/YII/advanced/yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2017-06-29 19:28:22 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '9'
+    'SSH_AGENT_PID' => '12354'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => ''
+    'QT_STYLE_OVERRIDE' => 'gtk'
+    'SESSION' => 'xfce'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => 'f64c29ab64554ac0b23f7ec3e2ca6fd8-1498754874.449841-688333604'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '37748740'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1001/12164'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'USER' => 'icomp'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'CLUTTER_BACKEND' => 'x11'
+    'QT_ACCESSIBILITY' => '1'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-sCKlQ3C7FWcp/agent.12353'
+    'SESSION_MANAGER' => 'local/icomp-pc:@/tmp/.ICE-unix/12335,unix/icomp-pc:/tmp/.ICE-unix/12335'
+    'USERNAME' => 'icomp'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/home/icomp/bin:/home/icomp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-openjdk-amd64/bin'
+    'QT_IM_MODULE' => ''
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/var/www/html/YII/advanced'
+    'JOB' => 'dbus'
+    'XMODIFIERS' => ''
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pt_BR.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/icomp'
+    'XDG_SEAT' => 'seat0'
+    'UPSTART_INSTANCE' => ''
+    'GTK_OVERLAY_SCROLLING' => '0'
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'icomp'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7DEsxLQyYE'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'QT4_IM_MODULE' => ''
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '9'
+    'XDG_RUNTIME_DIR' => '/run/user/1001'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'pt_BR.UTF-8'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'GTK_IM_MODULE' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/icomp/.Xauthority'
+    'COLORTERM' => 'xfce4-terminal'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/var/www/html/YII'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1498764502.5908
+    'REQUEST_TIME' => 1498764502
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
